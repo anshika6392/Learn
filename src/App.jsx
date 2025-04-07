@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Card from './components/Card'
+import Button from './components/button';
 
 const App = () => {
+
+  const [count,setCount]= useState(0);
+
+     function handleClick(){
+      setCount(count+1);
+       }
+
   return (
-    <div>
-      <h1 className='text-red-600'>i am gullu trivedi</h1>
-       <button className='bg-amber-300 border-2 black'>SUBMIT</button>
-  
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate pariatur velit nam sint. Dignissimos sed nihil laborum eius molestiae doloribus voluptatibus, odit sequi veniam fuga sint natus exercitationem ea dolore?</p>
-    </div>
+   <div>
+    <Button   handleClick={handleClick}  
+    text="click me"     
+    >
+      <h1>{count}</h1>
+    </Button>
+    {/* <Card name="anshika">
+      <h2>i am content</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nam aliquid dolorem voluptate provident tempora hic fugiat, sunt porro ea, libero ratione aspernatur facere fugit harum animi cumque excepturi id.</p>
+    </Card> */}
+   </div>
   )
 }
 
