@@ -7,6 +7,7 @@ const Button = (props) => {
     {props.text}
     </button>
     
+    
     </div>
     
   )
