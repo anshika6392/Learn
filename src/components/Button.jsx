@@ -6,7 +6,7 @@ const Button = (props) => {
     <button onClick={props.handleClick}>
     {props.text}
     </button>
-    
+    <h2>hello</h2>
     
     </div>
     
